@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App de Juegos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 App de Juegos</h1>
+
+    <!-- Menú de selección -->
+    <div class="menu">
+      <button onclick="mostrarJuego('adivina')">Adivina el número</button>
+      <button onclick="mostrarJuego('ppt')">Piedra, Papel o Tijera</button>
+    </div>
+
+    <!-- Juego: Adivina el número -->
+    <div id="adivina" class="juego oculto">
+      <h2>Adivina el número (1-100)</h2>
+      <p>Estoy pensando en un número entre 1 y 100. ¿Puedes adivinarlo?</p>
+      <input type="number" id="entrada" min="1" max="100" />
+      <button onclick="adivinaNumero()">Adivinar</button>
+      <p id="resultado"></p>
+      <button onclick="reiniciarAdivina()">Reiniciar</button>
+    </div>
+
+    <!-- Juego: Piedra, Papel o Tijera -->
+    <div id="ppt" class="juego oculto">
+      <h2>Piedra, Papel o Tijera</h2>
+      <p>Elige tu opción:</p>
+      <button onclick="jugarPPT('piedra')">🪨 Piedra</button>
+      <button onclick="jugarPPT('papel')">📄 Papel</button>
+      <button onclick="jugarPPT('tijera')">✂️ Tijera</button>
+      <p id="resultadoPPT"></p>
+      <button onclick="reiniciarPPT()">Reiniciar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
